@@ -1,47 +1,49 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737812758
-big_bubble.tscn::PackedScene::5606781835509871704::1737809467::0::1::::<><>::
-bubble.tscn::PackedScene::4124262885243892709::1737809238::0::1::::<><>::
-bulle.gd::GDScript::-1::1737812654::0::1::::<>CharacterBody2D<>::
-bulle.tscn::PackedScene::3153929171733735973::1737812654::0::1::::<><>::res://bulle.gd
-icon.svg::CompressedTexture2D::6651214868633794125::1737809088::1737812759::1::::<><>::
-root.tscn::PackedScene::4205678793972857034::1737812654::0::1::::<><>::uid://bk610ucxrolmb::::res://bulle.tscn<>uid://bw4v6skcktnox::::res://Tiles/Dungeon Tile Set.png<>uid://by03aijk8omun::::res://bubble.tscn<>uid://bf5dtxhf63v0r::::res://Art/Level 1/ocean_water.png<>uid://cl4743t6yd5iy::::res://big_bubble.tscn<>uid://cde28wcird2eh::::res://Art/Mossy Tileset/Level1.png
-::res://Art/::1737812654
-::res://Art/Level 1/::1737809158
-ocean_barnacles.png::CompressedTexture2D::8286048099307306437::1737809088::1737812759::1::::<><>::
-ocean_brick_centre.png::CompressedTexture2D::3330912503391354462::1737809088::1737812759::1::::<><>::
-ocean_brick_edge_bleft.png::CompressedTexture2D::2079466008839389590::1737809088::1737812759::1::::<><>::
-ocean_brick_edge_bottom.png::CompressedTexture2D::1693397308017220810::1737809088::1737812759::1::::<><>::
-ocean_brick_edge_bright.png::CompressedTexture2D::3135681728795584145::1737809088::1737812759::1::::<><>::
-ocean_brick_edge_left.png::CompressedTexture2D::6449530718163783657::1737809088::1737812759::1::::<><>::
-ocean_brick_edge_right.png::CompressedTexture2D::7087641559278306758::1737809088::1737812759::1::::<><>::
-ocean_brick_edge_tleft.png::CompressedTexture2D::4619964887151065350::1737809088::1737812759::1::::<><>::
-ocean_brick_edge_top.png::CompressedTexture2D::8127888405602896103::1737809088::1737812759::1::::<><>::
-ocean_brick_edge_tright.png::CompressedTexture2D::6271494433882259092::1737809088::1737812759::1::::<><>::
-ocean_pillar_base.png::CompressedTexture2D::4416219267972911476::1737809088::1737812759::1::::<><>::
-ocean_pillar_middle.png::CompressedTexture2D::5459842356826858579::1737809088::1737812759::1::::<><>::
-ocean_pillar_top.png::CompressedTexture2D::8211380903507125411::1737809088::1737812759::1::::<><>::
-ocean_semisolid.png::CompressedTexture2D::650389208013917920::1737809088::1737812759::1::::<><>::
-ocean_semisolid_edge_left.png::CompressedTexture2D::5945232981368015078::1737809088::1737812759::1::::<><>::
-ocean_semisolid_edge_right.png::CompressedTexture2D::3900046332213279568::1737809088::1737812759::1::::<><>::
-ocean_semisolid_pillar_left.png::CompressedTexture2D::5059350608062373987::1737809088::1737812759::1::::<><>::
-ocean_semisolid_pillar_right.png::CompressedTexture2D::8020191704256460295::1737809088::1737812759::1::::<><>::
-ocean_stone_centre.png::CompressedTexture2D::195127956534258933::1737809088::1737812758::1::::<><>::
-ocean_stone_edge_bleft.png::CompressedTexture2D::772641914504444418::1737809088::1737812759::1::::<><>::
-ocean_stone_edge_bottom.png::CompressedTexture2D::3945990068950699398::1737809088::1737812758::1::::<><>::
-ocean_stone_edge_bright.png::CompressedTexture2D::3913005504648077313::1737809088::1737812758::1::::<><>::
-ocean_stone_edge_left.png::CompressedTexture2D::6255199914071725555::1737809088::1737812758::1::::<><>::
-ocean_stone_edge_right.png::CompressedTexture2D::6917557774623427561::1737809088::1737812758::1::::<><>::
-ocean_stone_edge_tleft.png::CompressedTexture2D::3881424242298801464::1737809088::1737812759::1::::<><>::
-ocean_stone_edge_top.png::CompressedTexture2D::230096568772927995::1737809088::1737812759::1::::<><>::
-ocean_stone_edge_tright.png::CompressedTexture2D::8741383897744096177::1737809088::1737812759::1::::<><>::
-ocean_urchin.png::CompressedTexture2D::5441121859963342358::1737809088::1737812759::1::::<><>::
-ocean_water.png::CompressedTexture2D::2799513534687962087::1737809088::1737812759::1::::<><>::
-sky_day_full.png::CompressedTexture2D::7153772378599491801::1737809088::1737812759::1::::<><>::
-sky_day_layer1.png::CompressedTexture2D::3931072210906715888::1737809088::1737812759::1::::<><>::
-sky_day_layer2.png::CompressedTexture2D::6645368006666628045::1737809088::1737812759::1::::<><>::
-sky_day_layer3.png::CompressedTexture2D::7428773305934217552::1737809088::1737812759::1::::<><>::
-::res://Art/Mossy Tileset/::1737809158
-Level1.png::CompressedTexture2D::4993364858309756835::1737809088::1737812759::1::::<><>::
-::res://Tiles/::1737809158
-Dungeon Tile Set.png::CompressedTexture2D::3991773576030037791::1737809088::1737812759::1::::<><>::
+::res://::1737829140
+big_bubble.tscn::PackedScene::5606781835509871704::1737812852::0::1::::<><>::
+bubble.tscn::PackedScene::4124262885243892709::1737812852::0::1::::<><>::
+bulle.gd::GDScript::-1::1737829039::0::1::::<>CharacterBody2D<>::
+bulle.tscn::PackedScene::3153929171733735973::1737829039::0::1::::<><>::res://bulle.gd
+collision_shape_2d.gd::GDScript::-1::1737829039::0::1::::<>CollisionShape2D<>::
+icon.svg::CompressedTexture2D::6651214868633794125::1737809088::1737829141::1::::<><>::
+platform-ud.tscn::PackedScene::8221596867034580811::1737829039::0::1::::<><>::res://collision_shape_2d.gd
+root.tscn::PackedScene::4205678793972857034::1737829039::0::1::::<><>::uid://bk610ucxrolmb::::res://bulle.tscn<>uid://bw4v6skcktnox::::res://Tiles/Dungeon Tile Set.png<>uid://by03aijk8omun::::res://bubble.tscn<>uid://bf5dtxhf63v0r::::res://Art/Level 1/ocean_water.png<>uid://cl4743t6yd5iy::::res://big_bubble.tscn<>uid://cde28wcird2eh::::res://Art/Mossy Tileset/Level1.png<>uid://dpeuq8c66qymd::::res://platform-ud.tscn
+::res://Art/::1737829039
+::res://Art/Level 1/::1737828147
+ocean_barnacles.png::CompressedTexture2D::8286048099307306437::1737809088::1737829141::1::::<><>::
+ocean_brick_centre.png::CompressedTexture2D::3330912503391354462::1737809088::1737829141::1::::<><>::
+ocean_brick_edge_bleft.png::CompressedTexture2D::2079466008839389590::1737809088::1737829141::1::::<><>::
+ocean_brick_edge_bottom.png::CompressedTexture2D::1693397308017220810::1737809088::1737829141::1::::<><>::
+ocean_brick_edge_bright.png::CompressedTexture2D::3135681728795584145::1737809088::1737829141::1::::<><>::
+ocean_brick_edge_left.png::CompressedTexture2D::6449530718163783657::1737809088::1737829141::1::::<><>::
+ocean_brick_edge_right.png::CompressedTexture2D::7087641559278306758::1737809088::1737829141::1::::<><>::
+ocean_brick_edge_tleft.png::CompressedTexture2D::4619964887151065350::1737809088::1737829141::1::::<><>::
+ocean_brick_edge_top.png::CompressedTexture2D::8127888405602896103::1737809088::1737829141::1::::<><>::
+ocean_brick_edge_tright.png::CompressedTexture2D::6271494433882259092::1737809088::1737829141::1::::<><>::
+ocean_pillar_base.png::CompressedTexture2D::4416219267972911476::1737809088::1737829141::1::::<><>::
+ocean_pillar_middle.png::CompressedTexture2D::5459842356826858579::1737809088::1737829141::1::::<><>::
+ocean_pillar_top.png::CompressedTexture2D::8211380903507125411::1737809088::1737829141::1::::<><>::
+ocean_semisolid.png::CompressedTexture2D::650389208013917920::1737809088::1737829141::1::::<><>::
+ocean_semisolid_edge_left.png::CompressedTexture2D::5945232981368015078::1737809088::1737829141::1::::<><>::
+ocean_semisolid_edge_right.png::CompressedTexture2D::3900046332213279568::1737809088::1737829141::1::::<><>::
+ocean_semisolid_pillar_left.png::CompressedTexture2D::5059350608062373987::1737809088::1737829141::1::::<><>::
+ocean_semisolid_pillar_right.png::CompressedTexture2D::8020191704256460295::1737809088::1737829141::1::::<><>::
+ocean_stone_centre.png::CompressedTexture2D::195127956534258933::1737809088::1737829141::1::::<><>::
+ocean_stone_edge_bleft.png::CompressedTexture2D::772641914504444418::1737809088::1737829141::1::::<><>::
+ocean_stone_edge_bottom.png::CompressedTexture2D::3945990068950699398::1737809088::1737829141::1::::<><>::
+ocean_stone_edge_bright.png::CompressedTexture2D::3913005504648077313::1737809088::1737829141::1::::<><>::
+ocean_stone_edge_left.png::CompressedTexture2D::6255199914071725555::1737809088::1737829141::1::::<><>::
+ocean_stone_edge_right.png::CompressedTexture2D::6917557774623427561::1737809088::1737829141::1::::<><>::
+ocean_stone_edge_tleft.png::CompressedTexture2D::3881424242298801464::1737809088::1737829141::1::::<><>::
+ocean_stone_edge_top.png::CompressedTexture2D::230096568772927995::1737809088::1737829141::1::::<><>::
+ocean_stone_edge_tright.png::CompressedTexture2D::8741383897744096177::1737809088::1737829141::1::::<><>::
+ocean_urchin.png::CompressedTexture2D::5441121859963342358::1737809088::1737829141::1::::<><>::
+ocean_water.png::CompressedTexture2D::2799513534687962087::1737809088::1737829141::1::::<><>::
+sky_day_full.png::CompressedTexture2D::7153772378599491801::1737809088::1737829141::1::::<><>::
+sky_day_layer1.png::CompressedTexture2D::3931072210906715888::1737809088::1737829141::1::::<><>::
+sky_day_layer2.png::CompressedTexture2D::6645368006666628045::1737809088::1737829141::1::::<><>::
+sky_day_layer3.png::CompressedTexture2D::7428773305934217552::1737809088::1737829141::1::::<><>::
+::res://Art/Mossy Tileset/::1737828147
+Level1.png::CompressedTexture2D::4993364858309756835::1737809088::1737829141::1::::<><>::
+::res://Tiles/::1737828147
+Dungeon Tile Set.png::CompressedTexture2D::3991773576030037791::1737809088::1737829141::1::::<><>::
