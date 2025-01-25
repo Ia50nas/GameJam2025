@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://by03aijk8omun"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10m5m"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="bubble" type="CollisionShape2D" parent="." groups=["smol", "targets"]]
+position = Vector2(387, -32)
+shape = SubResource("CircleShape2D_10m5m")
+disabled = true

@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1737805283
+big_bubble.tscn::PackedScene::5606781835509871704::1737805204::0::1::::<><>::
+bubble.tscn::PackedScene::4124262885243892709::1737805204::0::1::::<><>::
+bulle.gd::GDScript::-1::1737805204::0::1::::<>CharacterBody2D<>::
+bulle.tscn::PackedScene::3153929171733735973::1737805204::0::1::::<><>::res://bulle.gd
+icon.svg::CompressedTexture2D::6651214868633794125::1737738335::1737805284::1::::<><>::
+root.tscn::PackedScene::4205678793972857034::1737805204::0::1::::<><>::uid://bk610ucxrolmb::::res://bulle.tscn<>uid://bw4v6skcktnox::::res://Tiles/Dungeon Tile Set.png<>uid://by03aijk8omun::::res://bubble.tscn<>uid://cl4743t6yd5iy::::res://big_bubble.tscn
+::res://Art/::1737748063
+::res://Art/Mossy Tileset/::1737748261
+::res://Scenes/::1737805247
+::res://Scripts/::1737747720
+::res://Tiles/::1737805087
+Dungeon Tile Set.png::CompressedTexture2D::3991773576030037791::1737738335::1737805284::1::::<><>::
