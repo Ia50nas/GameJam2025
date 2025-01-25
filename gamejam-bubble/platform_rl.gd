@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
 @export var speed := 50
-var max_width : float
-var min_width : float
+@export var max_width := 50
+@export var min_width := 50
 var direction := "right"
 
 func _ready() -> void:
-	max_width = global_position.x + 50
-	min_width = global_position.x - 50
+	max_width = global_position.x + max_width
+	min_width = global_position.x - min_width
 	print(max_width)
 	print(min_width)
 	
