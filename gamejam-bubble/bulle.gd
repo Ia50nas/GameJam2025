@@ -40,7 +40,14 @@ func _ready():
 	# Load your projectile scenes (set in the editor or loaded dynamically)
 	small_projectile_scene = preload("res://bubble.tscn")
 	large_projectile_scene = preload("res://big_bubble.tscn")
+<<<<<<< Updated upstream
 
+=======
+	$Void_Checker.connect("area_entered",_on_void_checker_area_entered)
+	$Hurtbox.connect("area_entered",_on_hurtbox_area_entered)
+	$Bubble_checker.connect("area_entered",_on_bubble_checker_area_entered)
+	
+>>>>>>> Stashed changes
 
 
 func _process(delta: float):
@@ -131,6 +138,11 @@ func get_movement_vector():
 	var moveVector = Vector2.ZERO
 	moveVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	moveVector.y = -1 if Input.is_action_just_pressed("jump") else 0
+	
+	if moveVector.x==-1:
+		$"Bulle Sprite".flip_h = true
+	else:
+		$"Bulle Sprite".flip_h = false
 	return moveVector
 func find_closest_target():
 	var closest_target = null
@@ -183,3 +195,41 @@ func shoot_big_bubble():
 	get_parent().add_child(bubble)
 	bubble.position=position
 	bubble.velocity=Vector2(projectile_speed*1.5,0)
+<<<<<<< Updated upstream
+=======
+
+func kill():
+	if isDying:
+		return
+	emit_signal("died")
+
+	
+
+
+func _on_void_checker_area_entered(area: Area2D) -> void:
+	fall=true
+	var timer=get_tree().create_timer(0.5)
+	await timer.timeout
+	emit_signal("died")
+
+
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	if area in get_tree().get_nodes_in_group('ouch'):
+		health-=1
+		print("ouch")
+		if health<=0:
+			emit_signal("died")
+	elif area in get_tree().get_nodes_in_group("sponge"):
+		print("spongebob")
+
+
+func _on_bubble_checker_area_entered(area: Area2D) -> void:
+	if is_homing_active==false:
+		var jumper=1100
+		if area.is_in_group("smol"):
+				jumper=700
+		area.queue_free()
+		velocity.x=0
+		velocity.y=-jumper
+		
+>>>>>>> Stashed changes

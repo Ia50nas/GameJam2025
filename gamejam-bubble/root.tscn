@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=11 format=3 uid="uid://b06i6ece1ksek"]
+=======
+[gd_scene load_steps=17 format=3 uid="uid://b06i6ece1ksek"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://bk610ucxrolmb" path="res://bulle.tscn" id="1_wv0go"]
 [ext_resource type="Texture2D" uid="uid://bw4v6skcktnox" path="res://Tiles/Dungeon Tile Set.png" id="2_65nu1"]
@@ -6,6 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://bf5dtxhf63v0r" path="res://Art/Level 1/ocean_water.png" id="4_7pxnk"]
 [ext_resource type="PackedScene" uid="uid://cl4743t6yd5iy" path="res://big_bubble.tscn" id="4_ndnsx"]
 [ext_resource type="Texture2D" uid="uid://cde28wcird2eh" path="res://Art/Mossy Tileset/Level1.png" id="5_u54k4"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" uid="uid://gxs8hbwfnxly" path="res://void.tscn" id="7_ilfdv"]
+[ext_resource type="PackedScene" uid="uid://c57yigavu3ep1" path="res://game_camera.tscn" id="9_3ifsq"]
+[ext_resource type="PackedScene" uid="uid://dfchue5acolig" path="res://spike.tscn" id="10_wiv32"]
+[ext_resource type="PackedScene" uid="uid://b3gwpulpkdghs" path="res://laser.tscn" id="11_6a0i7"]
+[ext_resource type="PackedScene" uid="uid://d33dxi0du7sq8" path="res://sponge.tscn" id="12_sduna"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0kua"]
 texture = ExtResource("2_65nu1")
@@ -349,7 +361,10 @@ tile_proxies/coords_level = [[2, Vector2i(0, 1)], [33, Vector2i(0, 1)], [2, Vect
 position = Vector2(-4, 0)
 
 [node name="bubble" parent="." instance=ExtResource("3_lk28a")]
-position = Vector2(-263, 10)
+position = Vector2(170, -22)
+
+[node name="bubble3" parent="." instance=ExtResource("3_lk28a")]
+position = Vector2(84, 2)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_p47hp")
@@ -357,3 +372,25 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-262103, 131072, 1, -262104, 131072, 1, -262105, 131072, 1, -262106, 131072, 1, -262107, 131072, 1, -262108, 131072, 1, -196572, 131072, 1, -196571, 131072, 1, -196570, 131072, 1, -196569, 131072, 1, -196568, 131072, 1, -196567, 131072, 1, -196566, 131072, 1, -196565, 131072, 1, -262101, 131072, 1, -262102, 131072, 1, 13, 1114145, 2, 65549, 1114145, 3, 14, 1179681, 2, 65550, 1179681, 3, 15, 1245217, 2, 65551, 1245217, 3, 16, 1310753, 2, 65552, 1310753, 3, 17, 1376289, 2, 65553, 1376289, 3, 18, 1441825, 2, 65554, 1441825, 3, 131085, 852001, 3, 131086, 917537, 3, 131087, 852001, 3, 131088, 917537, 3, 131089, 983073, 3, 131090, 1048609, 3, 65533, 1114145, 2, 131069, 1114145, 3, 196605, 852001, 3, 65534, 1179681, 2, 131070, 1179681, 3, 196606, 917537, 3, 65535, 1245217, 2, 131071, 1245217, 3, 196607, 852001, 3, 0, 1310753, 2, 65536, 1310753, 3, 131072, 917537, 3, 1, 1376289, 2, 65537, 1376289, 3, 131073, 983073, 3, 2, 1441825, 2, 65538, 1441825, 3, 131074, 1048609, 3)
 
 [node name="bubble2" parent="." instance=ExtResource("4_ndnsx")]
+<<<<<<< Updated upstream
+=======
+position = Vector2(387, -52)
+
+[node name="PlayerRoot" type="Node" parent="."]
+
+[node name="Bulle" parent="PlayerRoot" instance=ExtResource("1_wv0go")]
+position = Vector2(2, -29)
+
+[node name="GameCamera" parent="." instance=ExtResource("9_3ifsq")]
+
+[node name="void" parent="." instance=ExtResource("7_ilfdv")]
+
+[node name="Spike" parent="." instance=ExtResource("10_wiv32")]
+position = Vector2(36, -7)
+
+[node name="Area2D" parent="." instance=ExtResource("11_6a0i7")]
+position = Vector2(212, -96)
+
+[node name="Area2D2" parent="." instance=ExtResource("12_sduna")]
+position = Vector2(262, -3)
+>>>>>>> Stashed changes

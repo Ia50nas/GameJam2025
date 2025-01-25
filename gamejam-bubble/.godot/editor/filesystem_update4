@@ -2,3 +2,17 @@ res://root.tscn
 res://bulle.tscn
 res://bubble.tscn
 res://big_bubble.tscn
+<<<<<<< Updated upstream
+=======
+res://bulle.gd
+res://root.gd
+res://game_camera.tscn
+res://game_camera.gd
+res://void.tscn
+res://spike.gd
+res://spike.tscn
+res://sponge.tscn
+res://laser.tscn
+res://laser.gd
+res://Scenes/level_1.tscn
+>>>>>>> Stashed changes

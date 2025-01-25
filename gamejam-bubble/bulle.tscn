@@ -1,13 +1,96 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://bk610ucxrolmb"]
+=======
+[gd_scene load_steps=15 format=3 uid="uid://bk610ucxrolmb"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://bulle.gd" id="1_sw4qy"]
+[ext_resource type="Texture2D" uid="uid://w7wlenmr02cb" path="res://Art/Player/player_run.png" id="2_fv4te"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmkoc"]
+atlas = ExtResource("2_fv4te")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1i5y"]
+atlas = ExtResource("2_fv4te")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxb0l"]
+atlas = ExtResource("2_fv4te")
+region = Rect2(1920, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcvy8"]
+atlas = ExtResource("2_fv4te")
+region = Rect2(2880, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlehf"]
+atlas = ExtResource("2_fv4te")
+region = Rect2(3840, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qlat"]
+atlas = ExtResource("2_fv4te")
+region = Rect2(4800, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eguh"]
+atlas = ExtResource("2_fv4te")
+region = Rect2(5760, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eice"]
+atlas = ExtResource("2_fv4te")
+region = Rect2(6720, 0, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xeo1q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmkoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1i5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxb0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcvy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlehf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qlat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8eguh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6eice")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ptkek"]
 
+<<<<<<< Updated upstream
 [node name="Bulle" type="CharacterBody2D"]
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfcu3"]
+size = Vector2(20, 23.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbf0t"]
+size = Vector2(16, 21)
+
+[node name="Bulle" type="CharacterBody2D" groups=["Bulle"]]
+>>>>>>> Stashed changes
 script = ExtResource("1_sw4qy")
 
 [node name="Bulle Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -3)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_xeo1q")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, -25)
@@ -22,4 +105,36 @@ one_shot = true
 [node name="Homing_cooldown" type="Timer" parent="."]
 one_shot = true
 
+<<<<<<< Updated upstream
 [connection signal="timeout" from="Homing_cooldown" to="." method="_on_homing_cooldown_timeout"]
+=======
+[node name="Void_Checker" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Void_Checker"]
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_jfcu3")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(7.62939e-07, 1.5)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_jfcu3")
+
+[node name="Bubble_checker" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bubble_checker"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_mbf0t")
+
+[connection signal="timeout" from="Homing_cooldown" to="." method="_on_homing_cooldown_timeout"]
+[connection signal="area_entered" from="Void_Checker" to="." method="_on_void_checker_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="area_entered" from="Bubble_checker" to="." method="_on_bubble_checker_area_entered"]
+>>>>>>> Stashed changes

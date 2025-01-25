@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3gwpulpkdghs"]
+
+[ext_resource type="Script" path="res://laser.gd" id="1_asxsc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjg84"]
+radius = 1.0
+height = 96.0
+
+[node name="Area2D" type="Area2D" groups=["ouch"]]
+collision_layer = 32
+collision_mask = 32
+script = ExtResource("1_asxsc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_yjg84")
+
+[node name="Laser timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Laser timer" to="." method="_on_laser_timer_timeout"]

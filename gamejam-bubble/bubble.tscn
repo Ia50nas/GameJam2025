@@ -2,9 +2,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_10m5m"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Area2D" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="bubble" type="CollisionShape2D" parent="." groups=["smol", "targets"]]
-position = Vector2(387, -32)
 shape = SubResource("CircleShape2D_10m5m")
-disabled = true

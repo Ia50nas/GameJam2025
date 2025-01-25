@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d33dxi0du7sq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uptfs"]
+size = Vector2(17, 5)
+
+[node name="Area2D" type="Area2D" groups=["sponge"]]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uptfs")
