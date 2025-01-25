@@ -48,9 +48,9 @@ signal died
 func _ready():
 	# Load your projectile scenes (set in the editor or loaded dynamically)
 	small_projectile_scene = preload("res://GameObjects/bubble.tscn")
-	$Void_Checker.connect("area_entered",_on_void_checker_area_entered)
-	$Hurtbox.connect("area_entered",_on_hurtbox_area_entered)
-	$Bubble_checker.connect("area_entered",_on_bubble_checker_area_entered)
+	# $Void_Checker.connect("area_entered",_on_void_checker_area_entered)
+	#$Hurtbox.connect("area_entered",_on_hurtbox_area_entered)
+	#$Bubble_checker.connect("area_entered",_on_bubble_checker_area_entered)
 
 
 func _process(delta: float):

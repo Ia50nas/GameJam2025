@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bk610ucxrolmb"]
+[gd_scene load_steps=16 format=3 uid="uid://bk610ucxrolmb"]
 
 [ext_resource type="Script" path="res://bulle.gd" id="1_sw4qy"]
 [ext_resource type="Texture2D" uid="uid://w7wlenmr02cb" path="res://Art/Player/player_run.png" id="2_fv4te"]
@@ -75,6 +75,9 @@ size = Vector2(20, 23.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbf0t"]
 size = Vector2(16, 21)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdcow"]
+size = Vector2(20, 21.6667)
+
 [node name="Bulle" type="CharacterBody2D" groups=["Bulle"]]
 script = ExtResource("1_sw4qy")
 
@@ -125,6 +128,15 @@ shape = SubResource("RectangleShape2D_mbf0t")
 [node name="Shoot_Cooldown" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="Platform_checker" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_checker"]
+position = Vector2(0, 1)
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_gdcow")
 
 [connection signal="timeout" from="BubbleOvergrow" to="." method="_on_bubble_overgrow_timeout"]
 [connection signal="timeout" from="Homing_cooldown" to="." method="_on_homing_cooldown_timeout"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://root.gd" id="1_pjmau"]
 [ext_resource type="PackedScene" uid="uid://bk610ucxrolmb" path="res://bulle.tscn" id="1_wv0go"]
 [ext_resource type="Texture2D" uid="uid://bw4v6skcktnox" path="res://Tiles/Dungeon Tile Set.png" id="2_65nu1"]
-[ext_resource type="PackedScene" uid="uid://by03aijk8omun" path="res://bubble.tscn" id="3_lk28a"]
+[ext_resource type="PackedScene" uid="uid://by03aijk8omun" path="res://GameObjects/bubble.tscn" id="3_lk28a"]
 [ext_resource type="Texture2D" uid="uid://bf5dtxhf63v0r" path="res://Art/Level 1/ocean_water.png" id="4_7pxnk"]
 [ext_resource type="PackedScene" uid="uid://cl4743t6yd5iy" path="res://big_bubble.tscn" id="4_ndnsx"]
 [ext_resource type="Texture2D" uid="uid://cde28wcird2eh" path="res://Art/Mossy Tileset/Level1.png" id="5_u54k4"]

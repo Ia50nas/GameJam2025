@@ -15,3 +15,8 @@ res://laser.gd
 res://Scenes/level_1.tscn
 res://GameObjects/bubble.tscn
 res://Scenes/level_1.gd
+res://platform-c.tscn
+res://platform-ud.tscn
+res://platform_c.gd
+res://platform-rl.tscn
+res://platform_ud.gd
