@@ -1,5 +1,7 @@
-CharacterBody2D
-Node2D
-Timer
-CollisionShape2D
 Area2D
+Node2D
+CollisionShape2D
+Camera2D
+Node
+CharacterBody2D
+Timer

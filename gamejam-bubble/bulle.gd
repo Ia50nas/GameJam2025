@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var states=["normal","floating","homing","hurt"]
 var current_state=states[0]
-var gravity = 700
+var gravity = 800
 var maxHorizontalSpeed = 140
 var horizontalAcceleration = 1000
 var jumpSpeed = 300
@@ -22,7 +22,7 @@ var dash_direction = 0
 var can_dash = true
 var is_homing_active=false
 var homing_target: Node2D=null
-var homing_speed=1900
+var homing_speed=400
 var homing_detection_radius=200
 var homing_lock_duration=1
 var homing_timer=0.0
@@ -36,11 +36,15 @@ var hold_time = 1.0  # How long to hold for the large projectile
 var hold_timer = 0.0
 var is_holding = false
 
+var isDying=false
+var fall=false
+signal died
+
 func _ready():
 	# Load your projectile scenes (set in the editor or loaded dynamically)
 	small_projectile_scene = preload("res://bubble.tscn")
 	large_projectile_scene = preload("res://big_bubble.tscn")
-
+	$Void_Checker.connect("area_entered",_on_void_checker_area_entered)
 
 
 func _process(delta: float):
@@ -143,6 +147,10 @@ func find_closest_target():
 			closest_distance = distance
 	return closest_target
 
+
+	
+	
+
 func perform_homing_attack(delta):
 	while is_homing_active:
 		if homing_target and homing_timer>0 and !is_on_wall():
@@ -183,3 +191,17 @@ func shoot_big_bubble():
 	get_parent().add_child(bubble)
 	bubble.position=position
 	bubble.velocity=Vector2(projectile_speed*1.5,0)
+
+func kill():
+	if isDying:
+		return
+	emit_signal("died")
+
+	
+
+
+func _on_void_checker_area_entered(area: Area2D) -> void:
+	fall=true
+	var timer=get_tree().create_timer(0.5)
+	await timer.timeout
+	emit_signal("died")
