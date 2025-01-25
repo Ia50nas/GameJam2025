@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bk610ucxrolmb"]
+[gd_scene load_steps=4 format=3 uid="uid://bk610ucxrolmb"]
 
 [ext_resource type="Script" path="res://bulle.gd" id="1_sw4qy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ptkek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kw5c8"]
+size = Vector2(14, 26)
 
 [node name="Bulle" type="CharacterBody2D"]
 script = ExtResource("1_sw4qy")
@@ -21,5 +24,11 @@ one_shot = true
 
 [node name="Homing_cooldown" type="Timer" parent="."]
 one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, -24)
+shape = SubResource("RectangleShape2D_kw5c8")
 
 [connection signal="timeout" from="Homing_cooldown" to="." method="_on_homing_cooldown_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b06i6ece1ksek"]
+[gd_scene load_steps=14 format=3 uid="uid://b06i6ece1ksek"]
 
 [ext_resource type="PackedScene" uid="uid://bk610ucxrolmb" path="res://bulle.tscn" id="1_wv0go"]
 [ext_resource type="Texture2D" uid="uid://bw4v6skcktnox" path="res://Tiles/Dungeon Tile Set.png" id="2_65nu1"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cde28wcird2eh" path="res://Art/Mossy Tileset/Level1.png" id="5_u54k4"]
 [ext_resource type="PackedScene" uid="uid://dpeuq8c66qymd" path="res://platform-ud.tscn" id="7_tarje"]
 [ext_resource type="PackedScene" uid="uid://bpwqrbb6ywjki" path="res://platform-rl.tscn" id="8_blvjc"]
+[ext_resource type="PackedScene" uid="uid://cwxdac1ewgobb" path="res://platform-c.tscn" id="9_3c6ai"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0kua"]
 texture = ExtResource("2_65nu1")
@@ -361,11 +362,10 @@ layer_0/tile_data = PackedInt32Array(-262103, 131072, 1, -262104, 131072, 1, -26
 [node name="bubble2" parent="." instance=ExtResource("4_ndnsx")]
 
 [node name="Platform-UD" parent="." instance=ExtResource("7_tarje")]
-position = Vector2(130, 4)
-speed = 100
-
-[node name="Platform2-UD2" parent="." instance=ExtResource("7_tarje")]
 position = Vector2(367, -78)
 
 [node name="Platform-RL" parent="." instance=ExtResource("8_blvjc")]
 position = Vector2(476, -15)
+
+[node name="Platform-C" parent="." instance=ExtResource("9_3c6ai")]
+position = Vector2(136, 3)

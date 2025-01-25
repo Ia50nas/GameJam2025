@@ -1,25 +1,29 @@
 extends CharacterBody2D
 
+const speed := 400
+var min_height := 1000
+var original : Vector2
+var touched := false
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+
+func _ready() -> void:
+	original = self.global_position
+	
+	
+func _process(delta: float) -> void:
+	if self.global_position.y < min_height and touched == true:
+		position += Vector2(0, 2.0) * speed * delta
 
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	$CollapseTimer.start()
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+func _on_collapse_timer_timeout() -> void:
+	touched = true
+	$RestoreTimer.start()
 
-	move_and_slide()
+
+func _on_restore_timer_timeout() -> void:
+	position = original
+	touched = false
