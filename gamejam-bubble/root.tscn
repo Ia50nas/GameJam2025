@@ -1,23 +1,17 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=11 format=3 uid="uid://b06i6ece1ksek"]
-=======
 [gd_scene load_steps=17 format=3 uid="uid://b06i6ece1ksek"]
->>>>>>> Stashed changes
 
+[ext_resource type="Script" path="res://root.gd" id="1_pjmau"]
 [ext_resource type="PackedScene" uid="uid://bk610ucxrolmb" path="res://bulle.tscn" id="1_wv0go"]
 [ext_resource type="Texture2D" uid="uid://bw4v6skcktnox" path="res://Tiles/Dungeon Tile Set.png" id="2_65nu1"]
 [ext_resource type="PackedScene" uid="uid://by03aijk8omun" path="res://bubble.tscn" id="3_lk28a"]
 [ext_resource type="Texture2D" uid="uid://bf5dtxhf63v0r" path="res://Art/Level 1/ocean_water.png" id="4_7pxnk"]
 [ext_resource type="PackedScene" uid="uid://cl4743t6yd5iy" path="res://big_bubble.tscn" id="4_ndnsx"]
 [ext_resource type="Texture2D" uid="uid://cde28wcird2eh" path="res://Art/Mossy Tileset/Level1.png" id="5_u54k4"]
-<<<<<<< Updated upstream
-=======
-[ext_resource type="PackedScene" uid="uid://gxs8hbwfnxly" path="res://void.tscn" id="7_ilfdv"]
-[ext_resource type="PackedScene" uid="uid://c57yigavu3ep1" path="res://game_camera.tscn" id="9_3ifsq"]
+[ext_resource type="PackedScene" uid="uid://deakj10m201rt" path="res://void.tscn" id="7_ilfdv"]
+[ext_resource type="PackedScene" uid="uid://m4usun86d10o" path="res://game_camera.tscn" id="9_3ifsq"]
 [ext_resource type="PackedScene" uid="uid://dfchue5acolig" path="res://spike.tscn" id="10_wiv32"]
 [ext_resource type="PackedScene" uid="uid://b3gwpulpkdghs" path="res://laser.tscn" id="11_6a0i7"]
 [ext_resource type="PackedScene" uid="uid://d33dxi0du7sq8" path="res://sponge.tscn" id="12_sduna"]
->>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0kua"]
 texture = ExtResource("2_65nu1")
@@ -356,9 +350,7 @@ sources/33 = SubResource("TileSetAtlasSource_gby2t")
 tile_proxies/coords_level = [[2, Vector2i(0, 1)], [33, Vector2i(0, 1)], [2, Vector2i(1, 1)], [33, Vector2i(1, 1)], [4, Vector2i(0, 0)], [33, Vector2i(2, 0)], [4, Vector2i(0, 1)], [33, Vector2i(2, 1)], [4, Vector2i(1, 0)], [33, Vector2i(3, 0)], [4, Vector2i(1, 1)], [33, Vector2i(3, 1)], [5, Vector2i(0, 0)], [33, Vector2i(4, 0)], [5, Vector2i(0, 1)], [33, Vector2i(4, 1)], [5, Vector2i(1, 0)], [33, Vector2i(5, 0)], [5, Vector2i(1, 1)], [33, Vector2i(5, 1)], [6, Vector2i(0, 0)], [33, Vector2i(6, 0)], [6, Vector2i(0, 1)], [33, Vector2i(6, 1)], [6, Vector2i(1, 0)], [33, Vector2i(7, 0)], [6, Vector2i(1, 1)], [33, Vector2i(7, 1)], [7, Vector2i(0, 0)], [33, Vector2i(8, 0)], [7, Vector2i(0, 1)], [33, Vector2i(8, 1)], [7, Vector2i(1, 0)], [33, Vector2i(9, 0)], [7, Vector2i(1, 1)], [33, Vector2i(9, 1)], [8, Vector2i(0, 0)], [33, Vector2i(10, 0)], [8, Vector2i(0, 1)], [33, Vector2i(10, 1)], [8, Vector2i(1, 0)], [33, Vector2i(11, 0)], [8, Vector2i(1, 1)], [33, Vector2i(11, 1)], [9, Vector2i(0, 0)], [33, Vector2i(12, 0)], [9, Vector2i(0, 1)], [33, Vector2i(12, 1)], [9, Vector2i(1, 0)], [33, Vector2i(13, 0)], [9, Vector2i(1, 1)], [33, Vector2i(13, 1)], [10, Vector2i(0, 0)], [33, Vector2i(14, 0)], [10, Vector2i(0, 1)], [33, Vector2i(14, 1)], [10, Vector2i(1, 0)], [33, Vector2i(15, 0)], [10, Vector2i(1, 1)], [33, Vector2i(15, 1)], [11, Vector2i(0, 0)], [33, Vector2i(16, 0)], [11, Vector2i(0, 1)], [33, Vector2i(16, 1)], [11, Vector2i(1, 0)], [33, Vector2i(17, 0)], [11, Vector2i(1, 1)], [33, Vector2i(17, 1)], [12, Vector2i(0, 0)], [33, Vector2i(18, 0)], [12, Vector2i(0, 1)], [33, Vector2i(18, 1)], [12, Vector2i(1, 0)], [33, Vector2i(19, 0)], [12, Vector2i(1, 1)], [33, Vector2i(19, 1)], [13, Vector2i(0, 0)], [33, Vector2i(20, 0)], [13, Vector2i(0, 1)], [33, Vector2i(20, 1)], [13, Vector2i(1, 0)], [33, Vector2i(21, 0)], [13, Vector2i(1, 1)], [33, Vector2i(21, 1)], [14, Vector2i(0, 0)], [33, Vector2i(22, 0)], [14, Vector2i(0, 1)], [33, Vector2i(22, 1)], [14, Vector2i(1, 0)], [33, Vector2i(23, 0)], [14, Vector2i(1, 1)], [33, Vector2i(23, 1)], [15, Vector2i(0, 0)], [33, Vector2i(24, 0)], [15, Vector2i(0, 1)], [33, Vector2i(24, 1)], [15, Vector2i(1, 0)], [33, Vector2i(25, 0)], [15, Vector2i(1, 1)], [33, Vector2i(25, 1)], [16, Vector2i(0, 0)], [33, Vector2i(26, 0)], [16, Vector2i(0, 1)], [33, Vector2i(26, 1)], [16, Vector2i(1, 0)], [33, Vector2i(27, 0)], [16, Vector2i(1, 1)], [33, Vector2i(27, 1)], [17, Vector2i(0, 0)], [33, Vector2i(28, 0)], [17, Vector2i(0, 1)], [33, Vector2i(28, 1)], [17, Vector2i(1, 0)], [33, Vector2i(29, 0)], [17, Vector2i(1, 1)], [33, Vector2i(29, 1)], [18, Vector2i(0, 0)], [33, Vector2i(0, 2)], [18, Vector2i(0, 1)], [33, Vector2i(0, 3)], [18, Vector2i(1, 0)], [33, Vector2i(1, 2)], [18, Vector2i(1, 1)], [33, Vector2i(1, 3)], [19, Vector2i(0, 0)], [33, Vector2i(2, 2)], [19, Vector2i(0, 1)], [33, Vector2i(2, 3)], [20, Vector2i(1, 0)], [33, Vector2i(4, 2)], [20, Vector2i(1, 1)], [33, Vector2i(4, 3)], [21, Vector2i(0, 0)], [33, Vector2i(5, 2)], [21, Vector2i(0, 1)], [33, Vector2i(5, 3)], [21, Vector2i(1, 0)], [33, Vector2i(6, 2)], [21, Vector2i(1, 1)], [33, Vector2i(6, 3)], [22, Vector2i(0, 0)], [33, Vector2i(7, 2)], [22, Vector2i(0, 1)], [33, Vector2i(7, 3)], [22, Vector2i(1, 0)], [33, Vector2i(8, 2)], [22, Vector2i(1, 1)], [33, Vector2i(8, 3)], [23, Vector2i(0, 0)], [33, Vector2i(9, 2)], [23, Vector2i(0, 1)], [33, Vector2i(9, 3)], [23, Vector2i(1, 0)], [33, Vector2i(10, 2)], [23, Vector2i(1, 1)], [33, Vector2i(10, 3)], [24, Vector2i(0, 0)], [33, Vector2i(11, 2)], [24, Vector2i(0, 1)], [33, Vector2i(11, 3)], [24, Vector2i(1, 0)], [33, Vector2i(12, 2)], [24, Vector2i(1, 1)], [33, Vector2i(12, 3)], [25, Vector2i(0, 0)], [33, Vector2i(13, 2)], [25, Vector2i(0, 1)], [33, Vector2i(13, 3)], [25, Vector2i(1, 0)], [33, Vector2i(14, 2)], [25, Vector2i(1, 1)], [33, Vector2i(14, 3)], [26, Vector2i(0, 0)], [33, Vector2i(15, 2)], [26, Vector2i(0, 1)], [33, Vector2i(15, 3)], [26, Vector2i(1, 0)], [33, Vector2i(16, 2)], [26, Vector2i(1, 1)], [33, Vector2i(16, 3)], [27, Vector2i(0, 0)], [33, Vector2i(17, 2)], [27, Vector2i(0, 1)], [33, Vector2i(17, 3)], [27, Vector2i(1, 0)], [33, Vector2i(18, 2)], [27, Vector2i(1, 1)], [33, Vector2i(18, 3)], [28, Vector2i(0, 0)], [33, Vector2i(19, 2)], [28, Vector2i(0, 1)], [33, Vector2i(19, 3)], [28, Vector2i(1, 0)], [33, Vector2i(20, 2)], [28, Vector2i(1, 1)], [33, Vector2i(20, 3)], [29, Vector2i(0, 0)], [33, Vector2i(21, 2)], [29, Vector2i(0, 1)], [33, Vector2i(21, 3)], [29, Vector2i(1, 0)], [33, Vector2i(22, 2)], [29, Vector2i(1, 1)], [33, Vector2i(22, 3)], [30, Vector2i(0, 0)], [33, Vector2i(23, 2)], [30, Vector2i(0, 1)], [33, Vector2i(23, 3)], [30, Vector2i(1, 0)], [33, Vector2i(24, 2)], [30, Vector2i(1, 1)], [33, Vector2i(24, 3)]]
 
 [node name="Root" type="Node2D"]
-
-[node name="Bulle" parent="." instance=ExtResource("1_wv0go")]
-position = Vector2(-4, 0)
+script = ExtResource("1_pjmau")
 
 [node name="bubble" parent="." instance=ExtResource("3_lk28a")]
 position = Vector2(170, -22)
@@ -372,8 +364,6 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-262103, 131072, 1, -262104, 131072, 1, -262105, 131072, 1, -262106, 131072, 1, -262107, 131072, 1, -262108, 131072, 1, -196572, 131072, 1, -196571, 131072, 1, -196570, 131072, 1, -196569, 131072, 1, -196568, 131072, 1, -196567, 131072, 1, -196566, 131072, 1, -196565, 131072, 1, -262101, 131072, 1, -262102, 131072, 1, 13, 1114145, 2, 65549, 1114145, 3, 14, 1179681, 2, 65550, 1179681, 3, 15, 1245217, 2, 65551, 1245217, 3, 16, 1310753, 2, 65552, 1310753, 3, 17, 1376289, 2, 65553, 1376289, 3, 18, 1441825, 2, 65554, 1441825, 3, 131085, 852001, 3, 131086, 917537, 3, 131087, 852001, 3, 131088, 917537, 3, 131089, 983073, 3, 131090, 1048609, 3, 65533, 1114145, 2, 131069, 1114145, 3, 196605, 852001, 3, 65534, 1179681, 2, 131070, 1179681, 3, 196606, 917537, 3, 65535, 1245217, 2, 131071, 1245217, 3, 196607, 852001, 3, 0, 1310753, 2, 65536, 1310753, 3, 131072, 917537, 3, 1, 1376289, 2, 65537, 1376289, 3, 131073, 983073, 3, 2, 1441825, 2, 65538, 1441825, 3, 131074, 1048609, 3)
 
 [node name="bubble2" parent="." instance=ExtResource("4_ndnsx")]
-<<<<<<< Updated upstream
-=======
 position = Vector2(387, -52)
 
 [node name="PlayerRoot" type="Node" parent="."]
@@ -393,4 +383,3 @@ position = Vector2(212, -96)
 
 [node name="Area2D2" parent="." instance=ExtResource("12_sduna")]
 position = Vector2(262, -3)
->>>>>>> Stashed changes

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://by03aijk8omun" path="res://bubble.tscn" id="2_p5b71"]
 [ext_resource type="PackedScene" uid="uid://bk610ucxrolmb" path="res://bulle.tscn" id="3_47giv"]
 [ext_resource type="PackedScene" uid="uid://cl4743t6yd5iy" path="res://big_bubble.tscn" id="4_3s706"]
-[ext_resource type="PackedScene" uid="uid://c57yigavu3ep1" path="res://game_camera.tscn" id="5_8r38h"]
+[ext_resource type="PackedScene" uid="uid://m4usun86d10o" path="res://game_camera.tscn" id="5_8r38h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwype"]
 size = Vector2(154.5, 12)
@@ -128,4 +128,5 @@ position = Vector2(2011, 290)
 position = Vector2(1838, 284)
 
 [node name="GameCamera" parent="." instance=ExtResource("5_8r38h")]
+position = Vector2(-1280, 1106)
 zoom = Vector2(2.5, 2.5)
