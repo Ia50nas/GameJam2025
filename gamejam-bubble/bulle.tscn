@@ -19,7 +19,16 @@ shape = SubResource("CapsuleShape2D_ptkek")
 wait_time = 0.1
 one_shot = true
 
+[node name="BubbleOvergrow" type="Timer" parent="."]
+one_shot = true
+
 [node name="Homing_cooldown" type="Timer" parent="."]
 one_shot = true
 
+[node name="Shoot_Cooldown" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="BubbleOvergrow" to="." method="_on_bubble_overgrow_timeout"]
 [connection signal="timeout" from="Homing_cooldown" to="." method="_on_homing_cooldown_timeout"]
+[connection signal="timeout" from="Shoot_Cooldown" to="." method="_on_shoot_cooldown_timeout"]

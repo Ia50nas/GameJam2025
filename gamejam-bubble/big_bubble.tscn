@@ -8,7 +8,6 @@
 script = SubResource("GDScript_7nos6")
 
 [node name="bubble2" type="CollisionShape2D" parent="." groups=["targets"]]
-position = Vector2(482, -57)
 scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_10m5m")
 disabled = true

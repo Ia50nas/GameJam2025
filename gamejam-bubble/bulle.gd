@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 var states=["normal","floating","homing","hurt"]
 var current_state=states[0]
 var gravity = 700
@@ -30,17 +31,19 @@ var homing_cooldown = 0.3
 var can_homing_attack=true
 
 var small_projectile_scene : PackedScene
-var large_projectile_scene : PackedScene
-var projectile_speed = 200
 var hold_time = 1.0  # How long to hold for the large projectile
 var hold_timer = 0.0
 var is_holding = false
+var is_gun_on_cooldown = false
+var current_bubble: Bubble = null
+var direction = 1
+
+const PROJECTILE_SPEED = 2000.0
+const BUBBLE_GUN_POSITION = Vector2(6, -30);
 
 func _ready():
 	# Load your projectile scenes (set in the editor or loaded dynamically)
-	small_projectile_scene = preload("res://bubble.tscn")
-	large_projectile_scene = preload("res://big_bubble.tscn")
-
+	small_projectile_scene = preload("res://GameObjects/bubble.tscn")
 
 
 func _process(delta: float):
@@ -61,16 +64,17 @@ func _process(delta: float):
 			if Input.is_action_pressed("create_bubble"):
 				if not is_holding:
 					is_holding = true
-					hold_timer = 0.0 
+					hold_timer = 0.0
+					$BubbleOvergrow.start()
+					_shoot_bubble()
 				hold_timer+=delta
-				if hold_timer>=hold_time:
-					shoot_big_bubble()
-				else:
-					if is_holding:
-						shoot_smol_bubble()
+				_grow_bubble(hold_timer)
+			else:
+				if is_holding:
+					_release_bubble()
+					$BubbleOvergrow.stop()
 					is_holding=false
 					hold_timer=0.0
-					
 			handle_movement(delta)
 			handle_dash_input()
 
@@ -95,7 +99,11 @@ func handle_movement(delta: float):
 		if !is_on_floor() and $CoyoteTimer.is_stopped():
 			hasDoubeJump = false
 		$CoyoteTimer.stop()
-	
+	if velocity.x != 0:
+		if velocity.x > 0:
+			direction = 1
+		else:
+			direction = -1
 	if velocity.y < 0 and !Input.is_action_pressed("jump"):
 		velocity.y += gravity * JumpTerminationMultiplier * delta
 	else:
@@ -172,14 +180,37 @@ func perform_homing_attack(delta):
 func _on_homing_cooldown_timeout() -> void:
 	can_homing_attack=true
 
-func shoot_smol_bubble():
-	var bubble=small_projectile_scene.instantiate()
-	get_parent().add_child(bubble)
-	bubble.position=position
-	bubble.velocity=Vector2(projectile_speed,0)
+func _shoot_bubble():
+	current_bubble=small_projectile_scene.instantiate()
+	current_bubble.Allow_collision(false)
+	add_child(current_bubble)
+	var spawnPoint = Vector2(BUBBLE_GUN_POSITION.x * direction,BUBBLE_GUN_POSITION.y)
+	current_bubble.global_position=global_position + spawnPoint
 	
-func shoot_big_bubble():
-	var bubble=large_projectile_scene.instantiate()
-	get_parent().add_child(bubble)
-	bubble.position=position
-	bubble.velocity=Vector2(projectile_speed*1.5,0)
+func _grow_bubble(time) -> void:
+	if current_bubble != null:
+		var newScale = Vector2(1,1) * (time + 1)
+		current_bubble.apply_scale(newScale / current_bubble.scale)
+	
+func _release_bubble() -> void:
+	var position = current_bubble.global_position
+	remove_child(current_bubble)
+	get_parent().add_child(current_bubble)
+	current_bubble.global_position = position
+	var impuls = Vector2(direction, 0) * PROJECTILE_SPEED + velocity
+	current_bubble.velocity = impuls
+	current_bubble.Set_impuls(impuls)
+	current_bubble.Allow_collision(true)
+	current_bubble = null
+	$Shoot_Cooldown.start()
+	is_gun_on_cooldown = true
+
+func _on_bubble_overgrow_timeout() -> void:
+	if current_bubble != null:
+		is_holding=false
+		current_bubble.selfDestroy()
+		_release_bubble()
+
+
+func _on_shoot_cooldown_timeout() -> void:
+	is_gun_on_cooldown = false
