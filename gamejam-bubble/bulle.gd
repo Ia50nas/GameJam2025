@@ -230,7 +230,7 @@ func _on_bubble_checker_area_entered(area: Area2D) -> void:
 		var jumper=800
 		if area.is_in_group("smol"):
 				jumper=500
-		area.queue_free()
+		area.get_parent().queue_free()
 		velocity.x=0
 		velocity.y=-jumper
 
@@ -240,14 +240,15 @@ func _grow_bubble(time) -> void:
 		current_bubble.apply_scale(newScale / current_bubble.scale)
 	
 func _release_bubble() -> void:
-	var position = current_bubble.global_position
-	remove_child(current_bubble)
-	get_parent().add_child(current_bubble)
-	current_bubble.global_position = position
-	var impuls = Vector2(direction, 0) * PROJECTILE_SPEED + velocity
-	current_bubble.velocity = impuls
-	current_bubble.Set_impuls(impuls)
-	current_bubble.Allow_collision(true)
+	if current_bubble != null:
+		var position = current_bubble.global_position
+		remove_child(current_bubble)
+		get_parent().add_child(current_bubble)
+		current_bubble.global_position = position
+		var impuls = Vector2(direction, 0) * PROJECTILE_SPEED + velocity
+		current_bubble.velocity = impuls
+		current_bubble.Set_impuls(impuls)
+		current_bubble.Allow_collision(true)
 	current_bubble = null
 	$Shoot_Cooldown.start()
 	is_gun_on_cooldown = true

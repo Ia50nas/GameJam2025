@@ -13,3 +13,5 @@ res://sponge.tscn
 res://laser.tscn
 res://laser.gd
 res://Scenes/level_1.tscn
+res://GameObjects/bubble.tscn
+res://Scenes/level_1.gd

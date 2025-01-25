@@ -1,10 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://bfqlx56dcx5fi"]
+[gd_scene load_steps=18 format=3 uid="uid://bfqlx56dcx5fi"]
 
 [ext_resource type="PackedScene" path="res://tile_map.tscn" id="1_be4sr"]
-[ext_resource type="PackedScene" uid="uid://by03aijk8omun" path="res://bubble.tscn" id="2_p5b71"]
+[ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_nixpq"]
+[ext_resource type="PackedScene" uid="uid://by03aijk8omun" path="res://GameObjects/bubble.tscn" id="2_p5b71"]
 [ext_resource type="PackedScene" uid="uid://bk610ucxrolmb" path="res://bulle.tscn" id="3_47giv"]
 [ext_resource type="PackedScene" uid="uid://cl4743t6yd5iy" path="res://big_bubble.tscn" id="4_3s706"]
 [ext_resource type="PackedScene" uid="uid://m4usun86d10o" path="res://game_camera.tscn" id="5_8r38h"]
+[ext_resource type="PackedScene" uid="uid://by03aijk8omun" path="res://bubble.tscn" id="6_q6o3t"]
+[ext_resource type="PackedScene" uid="uid://deakj10m201rt" path="res://void.tscn" id="7_87v1w"]
+[ext_resource type="PackedScene" uid="uid://dfchue5acolig" path="res://spike.tscn" id="9_2h6fc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwype"]
 size = Vector2(154.5, 12)
@@ -31,6 +35,7 @@ size = Vector2(109, 17)
 size = Vector2(86.875, 20)
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_nixpq")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(586, 340)
@@ -116,7 +121,7 @@ position = Vector2(-735, 1008)
 position = Vector2(-1311, 1141)
 
 [node name="Big Bubble" parent="." instance=ExtResource("4_3s706")]
-position = Vector2(1383, 280)
+position = Vector2(-1066, 1055)
 
 [node name="Big Bubble2" parent="." instance=ExtResource("4_3s706")]
 position = Vector2(1557, 287)
@@ -130,3 +135,13 @@ position = Vector2(1838, 284)
 [node name="GameCamera" parent="." instance=ExtResource("5_8r38h")]
 position = Vector2(-1280, 1106)
 zoom = Vector2(2.5, 2.5)
+
+[node name="Area2D" parent="." instance=ExtResource("6_q6o3t")]
+position = Vector2(-1171, 1086)
+
+[node name="void" parent="." instance=ExtResource("7_87v1w")]
+position = Vector2(-1456, 1215)
+scale = Vector2(40, 1)
+
+[node name="Spike" parent="." instance=ExtResource("9_2h6fc")]
+position = Vector2(-892, 1136)

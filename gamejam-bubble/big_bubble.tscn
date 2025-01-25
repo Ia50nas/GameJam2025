@@ -2,10 +2,12 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_10m5m"]
 
-[node name="Area2D" type="Area2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
-[node name="bubble2" type="CollisionShape2D" parent="." groups=["targets"]]
+[node name="bubble2" type="CollisionShape2D" parent="Area2D" groups=["targets"]]
 scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_10m5m")
