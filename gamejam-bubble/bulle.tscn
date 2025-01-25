@@ -76,7 +76,7 @@ size = Vector2(20, 23.75)
 size = Vector2(16, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdcow"]
-size = Vector2(20, 21.6667)
+size = Vector2(10, 19.1667)
 
 [node name="Bulle" type="CharacterBody2D" groups=["Bulle"]]
 script = ExtResource("1_sw4qy")
@@ -134,7 +134,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_checker"]
-position = Vector2(0, 1)
+position = Vector2(0, -0.50001)
 scale = Vector2(1.2, 1.2)
 shape = SubResource("RectangleShape2D_gdcow")
 

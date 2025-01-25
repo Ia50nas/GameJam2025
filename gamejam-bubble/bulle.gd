@@ -149,7 +149,7 @@ func get_movement_vector():
 	
 	if moveVector.x==-1:
 		$"Bulle Sprite".flip_h = true
-	else:
+	elif moveVector.x==1:
 		$"Bulle Sprite".flip_h = false
 	return moveVector
 func find_closest_target():
