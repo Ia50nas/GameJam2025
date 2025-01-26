@@ -179,7 +179,7 @@ func perform_homing_attack(delta):
 				var jumper=1100
 				if homing_target.is_in_group("smol"):
 					jumper=700
-				homing_target.queue_free()
+				homing_target.get_parent().queue_free()
 				is_homing_active=false
 				homing_target=null
 				velocity.x=0
