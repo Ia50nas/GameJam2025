@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://771vir6ckgmi"
+path="res://.godot/imported/Blow8.ogg-cbed91f78e6bc637f24058978a774fed.oggvorbisstr"
+
+[deps]
+
+source_file="res://Art/UI and Sounds/Blow8.ogg"
+dest_files=["res://.godot/imported/Blow8.ogg-cbed91f78e6bc637f24058978a774fed.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

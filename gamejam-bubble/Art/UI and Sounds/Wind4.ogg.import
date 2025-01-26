@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://kfmkgy8wdlnp"
+path="res://.godot/imported/Wind4.ogg-5ecd97f671a606565b11816e960f9206.oggvorbisstr"
+
+[deps]
+
+source_file="res://Art/UI and Sounds/Wind4.ogg"
+dest_files=["res://.godot/imported/Wind4.ogg-5ecd97f671a606565b11816e960f9206.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
