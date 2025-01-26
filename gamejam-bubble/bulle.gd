@@ -47,6 +47,8 @@ var isDying=false
 var fall=false
 signal died
 
+var spongesInContact = []
+
 const MIX_SPONGE = 100
 const MIX_SHOOT = 30
 const MIX_HOMING = 40
@@ -67,7 +69,6 @@ func _process(delta: float):
 	elif is_homing_active and homing_target and bubble_mix >= MIX_HOMING:
 		_decrease_bubble_mix(MIX_HOMING)
 		perform_homing_attack(delta)
-		
 	elif !is_homing_active:
 		if is_dashing:
 			dash_timer -= delta
@@ -99,6 +100,8 @@ func _process(delta: float):
 
 		if wasOnFloor and !is_on_floor():
 			$CoyoteTimer.start()
+			
+	_sponge_process(delta)
 
 
 func handle_movement(delta: float):
@@ -240,8 +243,14 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 		if health<=0:
 			emit_signal("died")
 	elif area in get_tree().get_nodes_in_group("sponge"):
-		_decrease_bubble_mix(MIX_SPONGE)
+		spongesInContact.append(area)
 
+func _on_hurtbox_area_exited(area: Area2D) -> void:
+	spongesInContact.erase(area)
+	
+func _sponge_process(value: float) -> void:
+	for sponge: Area2D in spongesInContact:
+		_decrease_bubble_mix(MIX_SPONGE * value)
 
 func _on_bubble_checker_area_entered(area: Area2D) -> void:
 	if is_homing_active==false:
