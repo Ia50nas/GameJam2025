@@ -301,6 +301,7 @@ func _decrease_bubble_mix(decrease : int) -> void:
 	
 
 func _on_bubble_mix_timer_timeout() -> void:
+	print(bubble_mix)
 	if bubble_mix < 400:
 		bubble_mix += 1
 
