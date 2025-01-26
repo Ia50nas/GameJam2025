@@ -1,6 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://bfqlx56dcx5fi"]
 
 [ext_resource type="PackedScene" uid="uid://1wtp181bse1x" path="res://tile_map.tscn" id="1_be4sr"]
+[ext_resource type="PackedScene" uid="uid://1wtp181bse1x" path="res://tile_map.tscn" id="1_be4sr"]
 [ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_nixpq"]
 [ext_resource type="PackedScene" uid="uid://bk610ucxrolmb" path="res://bulle.tscn" id="3_47giv"]
 [ext_resource type="PackedScene" uid="uid://cl4743t6yd5iy" path="res://big_bubble.tscn" id="4_3s706"]
@@ -185,3 +186,12 @@ position = Vector2(4816, 463)
 stream = ExtResource("12_p606b")
 volume_db = -16.429
 autoplay = true
+
+[node name="Sponge" parent="." instance=ExtResource("11_04fjp")]
+position = Vector2(-891, 1148)
+
+[node name="Spike7" parent="." instance=ExtResource("9_2h6fc")]
+position = Vector2(-1293, 1145)
+
+[node name="Spike8" parent="." instance=ExtResource("9_2h6fc")]
+position = Vector2(-1064, 1144)

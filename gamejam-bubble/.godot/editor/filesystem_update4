@@ -1,5 +1,6 @@
 res://Scenes/level_1.tscn
 res://bulle.gd
+<<<<<<< HEAD
 res://root.tscn
 res://bulle.tscn
 res://GameObjects/bubble.tscn
@@ -8,3 +9,6 @@ res://bubble.tscn
 res://UI.tscn
 res://Scenes/level_1.gd
 res://GameObjects/bubble.gd
+=======
+res://bulle.tscn
+>>>>>>> bubble_mix
