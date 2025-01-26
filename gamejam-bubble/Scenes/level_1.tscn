@@ -179,4 +179,10 @@ position = Vector2(4400, 473)
 position = Vector2(4816, 463)
 
 [node name="Sponge" parent="." instance=ExtResource("11_04fjp")]
-position = Vector2(-1067, 1147)
+position = Vector2(-891, 1148)
+
+[node name="Spike7" parent="." instance=ExtResource("9_2h6fc")]
+position = Vector2(-1293, 1145)
+
+[node name="Spike8" parent="." instance=ExtResource("9_2h6fc")]
+position = Vector2(-1064, 1144)

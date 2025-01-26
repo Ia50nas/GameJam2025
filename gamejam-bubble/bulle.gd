@@ -37,6 +37,7 @@ var is_holding = false
 var is_gun_on_cooldown = false
 var current_bubble: Bubble = null
 var direction = 1
+var trapHitted = null;
 
 const PROJECTILE_SPEED = 2000.0
 const BUBBLE_GUN_SPREAD = 0.15
@@ -230,9 +231,12 @@ func _on_void_checker_area_entered(area: Area2D) -> void:
 
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
-	if area in get_tree().get_nodes_in_group('ouch'):
+	if area in get_tree().get_nodes_in_group('ouch') and area.monitorable and trapHitted == null:
 		health-=1
 		print("ouch")
+		trapHitted = area
+		trapHitted.set_deferred("monitorable", false)
+		$HurtCooldown.start()
 		if health<=0:
 			emit_signal("died")
 	elif area in get_tree().get_nodes_in_group("sponge"):
@@ -288,7 +292,10 @@ func _decrease_bubble_mix(decrease : int) -> void:
 	
 
 func _on_bubble_mix_timer_timeout() -> void:
-	print(bubble_mix)
-	bubble_mix += 1
-	if bubble_mix >= 400:
-		bubble_mix = 400
+	if bubble_mix < 400:
+		bubble_mix += 1
+
+
+func _on_hurt_cooldown_timeout() -> void:
+	trapHitted.set_deferred("monitorable", true)
+	trapHitted = null
