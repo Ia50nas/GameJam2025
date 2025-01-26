@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cl4743t6yd5iy" path="res://big_bubble.tscn" id="4_3s706"]
 [ext_resource type="PackedScene" path="res://game_camera.tscn" id="5_8r38h"]
 [ext_resource type="PackedScene" path="res://void.tscn" id="7_87v1w"]
-[ext_resource type="PackedScene" path="res://platform-rl.tscn" id="9_0dvvr"]
+[ext_resource type="PackedScene" uid="uid://c0wglkb5o7tue" path="res://platform-rl.tscn" id="9_0dvvr"]
 [ext_resource type="PackedScene" path="res://spike.tscn" id="9_2h6fc"]
 [ext_resource type="PackedScene" path="res://platform-c.tscn" id="11_xwy7w"]
 [ext_resource type="PackedScene" path="res://platform-ud.tscn" id="12_lnoqy"]
@@ -36,7 +36,6 @@ size = Vector2(109, 17)
 size = Vector2(86.875, 20)
 
 [node name="Level1" type="Node2D"]
-position = Vector2(-105, 90)
 script = ExtResource("1_nixpq")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
