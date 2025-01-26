@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		_impuls()
 		
 	velocity = impuls * delta
-	impuls -= impuls * delta * 0.1
+	impuls -= impuls * delta * 0.3
 
 	move_and_slide()
 	if destroyIt:
@@ -48,3 +48,12 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	areas.erase(area)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	impuls = -impuls
+	#print("bubble enter other body")
+
+
+#func _on_area_2d_body_exited(body: Node2D) -> void:
+	#print("bubble leave other body")

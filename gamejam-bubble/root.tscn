@@ -14,10 +14,10 @@ offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = -4660.0
-offset_top = -2023.0
-offset_right = 4347.0
-offset_bottom = 3116.0
+offset_left = -9868.0
+offset_top = -4932.0
+offset_right = 10132.0
+offset_bottom = 15068.0
 color = Color(0.0509804, 0.129412, 0.6, 1)
 
 [node name="TextureRect2" type="TextureRect" parent="."]

@@ -29,6 +29,7 @@ var homing_lock_duration=1
 var homing_timer=0.0
 var homing_cooldown = 0.3
 var can_homing_attack=true
+var playerkill=false
 
 var small_projectile_scene : PackedScene
 var hold_time = 1.0  # How long to hold for the large projectile
@@ -39,10 +40,11 @@ var current_bubble: Bubble = null
 var direction = 1
 var trapHitted = null;
 
-const PROJECTILE_SPEED = 2000.0
+const PROJECTILE_SPEED = 7000.0
 const BUBBLE_GUN_SPREAD = 0.15
-const BUBBLE_GUN_POSITION = Vector2(6, -30);
+const BUBBLE_GUN_POSITION = Vector2(25, -10);
 
+var shoot = false
 var isDying=false
 var fall=false
 signal died
@@ -90,7 +92,6 @@ func _process(delta: float):
 					is_holding=false
 					hold_timer=0.0
 			handle_movement(delta)
-			handle_dash_input()
 
 		var wasOnFloor = is_on_floor()
 		if is_on_floor():
@@ -106,26 +107,31 @@ func _process(delta: float):
 
 func handle_movement(delta: float):
 	var moveVector = get_movement_vector()
-	velocity.x += moveVector.x * horizontalAcceleration * delta
-	if moveVector.x == 0:
-		velocity.x = lerp(0, int(velocity.x), pow(2, -20 * delta))
-	velocity.x = clamp(velocity.x, -maxHorizontalSpeed, maxHorizontalSpeed)
-	
-	if moveVector.y < 0 and (is_on_floor() or !$CoyoteTimer.is_stopped() or hasDoubeJump):
-		$Jump.play()
-		velocity.y = moveVector.y * jumpSpeed
-		if !is_on_floor() and $CoyoteTimer.is_stopped():
-			hasDoubeJump = false
-		$CoyoteTimer.stop()
-	if velocity.x != 0:
-		if velocity.x > 0:
-			direction = 1
+	if playerkill==false:
+		velocity.x += moveVector.x * horizontalAcceleration * delta
+		if moveVector.x == 0:
+			velocity.x = lerp(0, int(velocity.x), pow(2, -20 * delta))
+		velocity.x = clamp(velocity.x, -maxHorizontalSpeed, maxHorizontalSpeed)
+		
+		if moveVector.y < 0 and (is_on_floor() or !$CoyoteTimer.is_stopped() or hasDoubeJump):
+			$Jump.play()
+			velocity.y = moveVector.y * jumpSpeed
+			if !is_on_floor() and $CoyoteTimer.is_stopped():
+				hasDoubeJump = false
+			$CoyoteTimer.stop()
+		if velocity.x != 0:
+			if velocity.x > 0:
+				direction = 1
+			else:
+				direction = -1
+		if velocity.y < 0 and !Input.is_action_pressed("jump"):
+			velocity.y += gravity * JumpTerminationMultiplier * delta
 		else:
-			direction = -1
-	if velocity.y < 0 and !Input.is_action_pressed("jump"):
-		velocity.y += gravity * JumpTerminationMultiplier * delta
+			velocity.y += gravity * delta
+		handle_dash_input()
 	else:
-		velocity.y += gravity * delta
+		velocity.x=0
+	animation_Check(moveVector)
 	
 	if Input.is_action_just_pressed("homing_attack") and can_homing_attack and bubble_mix >= MIX_HOMING:
 		if !is_on_floor():
@@ -221,8 +227,11 @@ func _shoot_bubble():
 		add_child(current_bubble)
 		var spawnPoint = Vector2(BUBBLE_GUN_POSITION.x * direction,BUBBLE_GUN_POSITION.y)
 		current_bubble.global_position=global_position + spawnPoint
+		shoot = true
 		_decrease_bubble_mix(MIX_SHOOT)
-
+		var timer=get_tree().create_timer(0.7)
+		await timer.timeout
+		shoot=false
 
 func kill():
 	if isDying:
@@ -246,6 +255,9 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 		trapHitted.set_deferred("monitorable", false)
 		$HurtCooldown.start()
 		if health<=0:
+			playerkill=true
+			var timer=get_tree().create_timer(0.9)
+			await timer.timeout
 			emit_signal("died")
 	elif area in get_tree().get_nodes_in_group("sponge"):
 		spongesInContact.append(area)
@@ -307,8 +319,6 @@ func _decrease_bubble_mix(decrease : int) -> void:
 		bubble_mix = 0
 	
 
-<<<<<<< Updated upstream
-=======
 func animation_Check(movevector):
 	if(playerkill):
 		$"Bulle Sprite".play("dead")
@@ -329,7 +339,6 @@ func animation_Check(movevector):
 	else:
 		$"Bulle Sprite".play("idle")
 
->>>>>>> Stashed changes
 func _on_bubble_mix_timer_timeout() -> void:
 	print(bubble_mix)
 	if bubble_mix < 400:
