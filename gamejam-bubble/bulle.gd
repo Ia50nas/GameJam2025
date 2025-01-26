@@ -39,6 +39,7 @@ var current_bubble: Bubble = null
 var direction = 1
 
 const PROJECTILE_SPEED = 2000.0
+const BUBBLE_GUN_SPREAD = 0.15
 const BUBBLE_GUN_POSITION = Vector2(6, -30);
 
 var isDying=false
@@ -245,7 +246,7 @@ func _release_bubble() -> void:
 		remove_child(current_bubble)
 		get_parent().add_child(current_bubble)
 		current_bubble.global_position = position
-		var impuls = Vector2(direction, 0) * PROJECTILE_SPEED + velocity
+		var impuls = Vector2(direction, randf_range(-BUBBLE_GUN_SPREAD, BUBBLE_GUN_SPREAD)) * PROJECTILE_SPEED + velocity
 		current_bubble.velocity = impuls
 		current_bubble.Set_impuls(impuls)
 		current_bubble.Allow_collision(true)
