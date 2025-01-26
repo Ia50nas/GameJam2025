@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 AudioStreamPlayer
 AudioStreamPlayer2D
@@ -9,10 +10,24 @@ ParallaxBackground
 Sprite2D
 CanvasLayer
 ParallaxBackground
+=======
+AudioStreamPlayer
+TextureRect
+ColorRect
+Camera2D
+VBoxContainer
+Button
+Control
+AnimatedSprite2D
+Sprite2D
+Timer
+ParallaxBackground
+>>>>>>> Stashed changes
 ParallaxLayer
 Parallax2D
 TouchScreenButton
 Area2D
+<<<<<<< Updated upstream
 CollisionShape2D
 Node2D
 CharacterBody2D
@@ -22,3 +37,5 @@ Timer
 Camera2D
 Node
 >>>>>>> bubble_mix
+=======
+>>>>>>> Stashed changes

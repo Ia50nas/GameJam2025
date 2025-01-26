@@ -307,6 +307,29 @@ func _decrease_bubble_mix(decrease : int) -> void:
 		bubble_mix = 0
 	
 
+<<<<<<< Updated upstream
+=======
+func animation_Check(movevector):
+	if(playerkill):
+		$"Bulle Sprite".play("dead")
+	elif(is_dashing):
+		$"Bulle Sprite".play("dash")
+	elif(!is_on_floor()):
+		if(shoot):
+			$"Bulle Sprite".play("jump_attack")
+		else:
+			$"Bulle Sprite".play("jump")
+	elif(movevector.x != 0):
+		if (shoot):
+			$"Bulle Sprite".play("shoot")
+		else:
+			$"Bulle Sprite".play("walk")
+	elif(shoot):
+		$"Bulle Sprite".play("idle_attack")
+	else:
+		$"Bulle Sprite".play("idle")
+
+>>>>>>> Stashed changes
 func _on_bubble_mix_timer_timeout() -> void:
 	print(bubble_mix)
 	if bubble_mix < 400:

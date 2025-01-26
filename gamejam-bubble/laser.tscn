@@ -1,10 +1,126 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3gwpulpkdghs"]
+[gd_scene load_steps=21 format=3 uid="uid://b3gwpulpkdghs"]
 
 [ext_resource type="Script" path="res://laser.gd" id="1_asxsc"]
+[ext_resource type="Texture2D" uid="uid://c50dedbm51kpk" path="res://Art/Level 1/Level 1_extra/ocean_laser.png" id="2_hcx4l"]
+[ext_resource type="Texture2D" uid="uid://cybqcipebi8i3" path="res://Art/Level 1/Level 1_extra/ocean_laser_fish.png" id="3_27gi3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjg84"]
 radius = 1.0
 height = 96.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50i1d"]
+atlas = ExtResource("2_hcx4l")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcn5a"]
+atlas = ExtResource("2_hcx4l")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw2tk"]
+atlas = ExtResource("2_hcx4l")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vbs1"]
+atlas = ExtResource("2_hcx4l")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i45pu"]
+atlas = ExtResource("2_hcx4l")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6pb1"]
+atlas = ExtResource("2_hcx4l")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8yg4"]
+atlas = ExtResource("2_hcx4l")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61r6u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50i1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcn5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iw2tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vbs1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i45pu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6pb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8yg4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqm8w"]
+atlas = ExtResource("3_27gi3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4yw4"]
+atlas = ExtResource("3_27gi3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38ciq"]
+atlas = ExtResource("3_27gi3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofh7e"]
+atlas = ExtResource("3_27gi3")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2lvk"]
+atlas = ExtResource("3_27gi3")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drel5"]
+atlas = ExtResource("3_27gi3")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxm7y"]
+atlas = ExtResource("3_27gi3")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2i6en"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqm8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4yw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38ciq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofh7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2lvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drel5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxm7y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Area2D" type="Area2D" groups=["ouch"]]
 collision_layer = 32
@@ -17,5 +133,19 @@ shape = SubResource("CapsuleShape2D_yjg84")
 
 [node name="Laser timer" type="Timer" parent="."]
 autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 2.5)
+scale = Vector2(0.4375, 5.84375)
+sprite_frames = SubResource("SpriteFrames_61r6u")
+autoplay = "default"
+frame_progress = 0.777141
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -98)
+scale = Vector2(0.438, 0.493)
+sprite_frames = SubResource("SpriteFrames_2i6en")
+autoplay = "default"
+frame_progress = 0.239392
 
 [connection signal="timeout" from="Laser timer" to="." method="_on_laser_timer_timeout"]
