@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		_impuls()
 		
 	velocity = impuls * delta
-	impuls -= impuls * delta * 0.1
+	impuls -= impuls * delta * 0.3
 
 	move_and_slide()
 	if destroyIt:

@@ -40,7 +40,7 @@ var current_bubble: Bubble = null
 var direction = 1
 var trapHitted = null;
 
-const PROJECTILE_SPEED = 2000.0
+const PROJECTILE_SPEED = 7000.0
 const BUBBLE_GUN_SPREAD = 0.15
 const BUBBLE_GUN_POSITION = Vector2(25, -10);
 

@@ -1,3 +1,4 @@
 res://Scenes/level_1.tscn
-res://bulle.gd
 res://bulle.tscn
+res://GameObjects/bubble.gd
+res://bulle.gd
