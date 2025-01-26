@@ -57,7 +57,7 @@ collision_mask = 2
 scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_10m5m")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 position = Vector2(2.14577e-06, -3.33786e-06)
 scale = Vector2(0.246154, 0.24031)
 sprite_frames = SubResource("SpriteFrames_crngx")

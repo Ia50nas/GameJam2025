@@ -1,0 +1,137 @@
+[gd_scene load_steps=16 format=3 uid="uid://c77vqrovadf5n"]
+
+[ext_resource type="Texture2D" uid="uid://ckc62ybm2x475" path="res://Art/UI and Sounds/Health_bar_O_hp.png" id="1_alnyo"]
+[ext_resource type="Texture2D" uid="uid://5pa3fm21buq3" path="res://Art/UI and Sounds/Health_bar_1_hp.png" id="2_ffhnu"]
+[ext_resource type="Texture2D" uid="uid://ywp5s04hd0io" path="res://Art/UI and Sounds/Health_bar_2_hp.png" id="3_c7vi1"]
+[ext_resource type="Texture2D" uid="uid://ce32qpqvsrnvy" path="res://Art/UI and Sounds/Health_bar_3_hp.png" id="4_irrav"]
+[ext_resource type="Texture2D" uid="uid://dxecbtfro0cfs" path="res://Art/UI and Sounds/Soap_bar_0.png" id="5_8nl8r"]
+[ext_resource type="Texture2D" uid="uid://nl6v7e8eg1mg" path="res://Art/UI and Sounds/Soap_bar_100.png" id="6_aolkb"]
+[ext_resource type="Texture2D" uid="uid://b42oqy5a0wnsa" path="res://Art/UI and Sounds/Soap_bar_25.png" id="7_vjfvb"]
+[ext_resource type="Texture2D" uid="uid://dgm4j75ipe8rc" path="res://Art/UI and Sounds/Soap_bar_50.png" id="8_xbyci"]
+[ext_resource type="Texture2D" uid="uid://64xsc8bmsbs4" path="res://Art/UI and Sounds/Soap_bar_75_.png" id="9_s31ch"]
+[ext_resource type="Texture2D" uid="uid://4k34h58geawd" path="res://Art/UI and Sounds/Health_icon.png" id="10_03mhe"]
+[ext_resource type="Texture2D" uid="uid://putt7luqle6u" path="res://Art/UI and Sounds/Soap_icon.png" id="11_7mswu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7nyvc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_alnyo")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ffhnu")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c7vi1")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_irrav")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jnw75"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8nl8r")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_aolkb")
+}],
+"loop": true,
+"name": &"100",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vjfvb")
+}],
+"loop": true,
+"name": &"25",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xbyci")
+}],
+"loop": true,
+"name": &"50",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_s31ch")
+}],
+"loop": true,
+"name": &"75",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4al6q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_03mhe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nf8sc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7mswu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Health Bar" type="AnimatedSprite2D" parent="."]
+position = Vector2(123, 58)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_7nyvc")
+animation = &"3"
+
+[node name="Soap Bar" type="AnimatedSprite2D" parent="."]
+position = Vector2(123, 103)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_jnw75")
+animation = &"100"
+
+[node name="Health icon" type="AnimatedSprite2D" parent="."]
+position = Vector2(53, 52)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_4al6q")
+
+[node name="Soap Icon" type="AnimatedSprite2D" parent="."]
+position = Vector2(57, 108)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_nf8sc")

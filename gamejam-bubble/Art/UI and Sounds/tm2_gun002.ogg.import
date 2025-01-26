@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cloc2gup010oq"
+path="res://.godot/imported/tm2_gun002.ogg-bc1296228cb2719924c2cd45dd3a3d09.oggvorbisstr"
+
+[deps]
+
+source_file="res://Art/UI and Sounds/tm2_gun002.ogg"
+dest_files=["res://.godot/imported/tm2_gun002.ogg-bc1296228cb2719924c2cd45dd3a3d09.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

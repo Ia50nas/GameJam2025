@@ -1,6 +1,12 @@
 [gd_scene load_steps=61 format=3 uid="uid://bk610ucxrolmb"]
 
 [ext_resource type="Script" path="res://bulle.gd" id="1_sw4qy"]
+[ext_resource type="Texture2D" uid="uid://w7wlenmr02cb" path="res://Art/Player/player_run.png" id="2_fv4te"]
+[ext_resource type="AudioStream" uid="uid://cloc2gup010oq" path="res://Art/UI and Sounds/tm2_gun002.ogg" id="3_3n34l"]
+[ext_resource type="AudioStream" uid="uid://kfmkgy8wdlnp" path="res://Art/UI and Sounds/Wind4.ogg" id="3_ukat4"]
+[ext_resource type="AudioStream" uid="uid://crhge6bs53ua8" path="res://Art/UI and Sounds/Wind7.ogg" id="4_wmrr7"]
+[ext_resource type="AudioStream" uid="uid://771vir6ckgmi" path="res://Art/UI and Sounds/Blow8.ogg" id="5_phvaf"]
+[ext_resource type="AudioStream" uid="uid://c12wkb4v455qw" path="res://Art/UI and Sounds/Water5.ogg" id="6_4iy8c"]
 [ext_resource type="Texture2D" uid="uid://cty4r5ybt7yqv" path="res://Art/Player/dash/dash1.png" id="2_jbq7k"]
 [ext_resource type="Texture2D" uid="uid://0bf6y6u415w5" path="res://Art/Player/dash/dash2.png" id="3_3sion"]
 [ext_resource type="Texture2D" uid="uid://5invmr015ll1" path="res://Art/Player/dash/dash3.png" id="4_ij70y"]
@@ -376,9 +382,40 @@ position = Vector2(0, -0.50001)
 scale = Vector2(1.2, 1.2)
 shape = SubResource("RectangleShape2D_gdcow")
 
+[node name="Pop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3n34l")
+volume_db = -8.0
+
+[node name="Dash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ukat4")
+volume_db = -12.0
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wmrr7")
+volume_db = -12.0
+
+[node name="Ouch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_phvaf")
+volume_db = -12.0
+
+[node name="Bubble" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_4iy8c")
+volume_db = -12.0
+
+[node name="BubbleMixTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="HurtCooldown" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="timeout" from="BubbleOvergrow" to="." method="_on_bubble_overgrow_timeout"]
 [connection signal="timeout" from="Homing_cooldown" to="." method="_on_homing_cooldown_timeout"]
 [connection signal="area_entered" from="Void_Checker" to="." method="_on_void_checker_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="area_exited" from="Hurtbox" to="." method="_on_hurtbox_area_exited"]
 [connection signal="area_entered" from="Bubble_checker" to="." method="_on_bubble_checker_area_entered"]
 [connection signal="timeout" from="Shoot_Cooldown" to="." method="_on_shoot_cooldown_timeout"]
+[connection signal="timeout" from="BubbleMixTimer" to="." method="_on_bubble_mix_timer_timeout"]
+[connection signal="timeout" from="HurtCooldown" to="." method="_on_hurt_cooldown_timeout"]
