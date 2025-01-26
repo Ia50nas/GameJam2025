@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://1wtp181bse1x"]
+[gd_scene load_steps=8 format=3 uid="uid://bsvnmfn7cn4mi"]
 
 [ext_resource type="Texture2D" uid="uid://bw4v6skcktnox" path="res://Tiles/Dungeon Tile Set.png" id="1_k1cjp"]
 [ext_resource type="Texture2D" uid="uid://bf5dtxhf63v0r" path="res://Art/Level 1/ocean_water.png" id="2_2tm1s"]
@@ -360,7 +360,8 @@ texture = ExtResource("3_faa3u")
 37:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_p47hp"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 257
+physics_layer_0/collision_mask = 257
 sources/0 = SubResource("TileSetAtlasSource_e0kua")
 sources/31 = SubResource("TileSetAtlasSource_5m5ew")
 sources/5 = SubResource("TileSetAtlasSource_8upp4")
