@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfchue5acolig"]
+[gd_scene load_steps=3 format=3 uid="uid://dfchue5acolig"]
 
 [ext_resource type="Script" path="res://spike.gd" id="1_uw7d5"]
+[ext_resource type="Texture2D" uid="uid://dqb3ab3pgn1fl" path="res://Art/Level 1/ocean_barnacles.png" id="2_edvow"]
 
 [node name="Spike" type="Area2D" groups=["ouch"]]
 collision_layer = 32
@@ -9,9 +10,10 @@ script = ExtResource("1_uw7d5")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 scale = Vector2(2, 2)
-polygon = PackedVector2Array(0, -3, 4, 3, -4, 3)
+polygon = PackedVector2Array(0, -3, 8, 3, -8, 3)
 
 [node name="Spike" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+position = Vector2(0, -10)
+texture = ExtResource("2_edvow")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

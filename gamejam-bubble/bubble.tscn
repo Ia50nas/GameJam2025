@@ -1,6 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://by03aijk8omun"]
+[gd_scene load_steps=12 format=3 uid="uid://by03aijk8omun"]
+
+[ext_resource type="Texture2D" uid="uid://pmruc23fvrpc" path="res://Art/Bubble/bounce/bounc1.png" id="1_0r44h"]
+[ext_resource type="Texture2D" uid="uid://bab81emtkkysk" path="res://Art/Bubble/bounce/bounc2.png" id="2_w7pcx"]
+[ext_resource type="Texture2D" uid="uid://qdvnal6hplox" path="res://Art/Bubble/bounce/bounc3.png" id="3_7knkv"]
+[ext_resource type="Texture2D" uid="uid://dj108r8xr013a" path="res://Art/Bubble/bounce/bounc4.png" id="4_nvchi"]
+[ext_resource type="Texture2D" uid="uid://dt4dj0exb4h3l" path="res://Art/Bubble/bounce/bounc5.png" id="5_b2vsf"]
+[ext_resource type="Texture2D" uid="uid://dmqgo5a80yygn" path="res://Art/Bubble/bounce/bounc6.png" id="6_be8jc"]
+[ext_resource type="Texture2D" uid="uid://mu4837f3kjwr" path="res://Art/Bubble/bounce/bounc7.png" id="7_hoyvn"]
+[ext_resource type="Texture2D" uid="uid://cxkw00tshlv6o" path="res://Art/Bubble/bounce/bounc8.png" id="8_cmlmm"]
+[ext_resource type="Texture2D" uid="uid://bc0j1g6rp3khf" path="res://Art/Bubble/bounce/bounc9.png" id="9_erb43"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_10m5m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wx408"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0r44h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w7pcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7knkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nvchi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b2vsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_be8jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hoyvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cmlmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_erb43")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 2
@@ -8,3 +53,8 @@ collision_mask = 2
 
 [node name="bubble" type="CollisionShape2D" parent="." groups=["smol", "targets"]]
 shape = SubResource("CircleShape2D_10m5m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.499999, 1.19209e-06)
+scale = Vector2(0.0807692, 0.0775194)
+sprite_frames = SubResource("SpriteFrames_wx408")
