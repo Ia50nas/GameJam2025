@@ -1,8 +1,3 @@
-res://root.tscn
-res://bulle.tscn
-res://bubble.tscn
-res://big_bubble.tscn
-res://GameObjects/bubble.tscn
-res://bulle.gd
-res://GameObjects/bubble.gd
 res://Scenes/level_1.tscn
+res://bulle.gd
+res://bulle.tscn
