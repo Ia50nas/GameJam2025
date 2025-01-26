@@ -24,3 +24,4 @@ mono_crash.*.json
 
 # Jetbrains IDE files
 .idea/
+/gitignore (1).txt
