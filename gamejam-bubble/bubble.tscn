@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://by03aijk8omun"]
+[gd_scene load_steps=12 format=3 uid="uid://8m5yv3q4skv5"]
 
 [ext_resource type="Texture2D" uid="uid://pmruc23fvrpc" path="res://Art/Bubble/bounce/bounc1.png" id="1_0r44h"]
 [ext_resource type="Texture2D" uid="uid://bab81emtkkysk" path="res://Art/Bubble/bounce/bounc2.png" id="2_w7pcx"]

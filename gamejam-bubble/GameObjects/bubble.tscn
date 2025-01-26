@@ -46,6 +46,11 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle_test",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_li6hs"]

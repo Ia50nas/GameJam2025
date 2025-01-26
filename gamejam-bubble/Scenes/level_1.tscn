@@ -1,15 +1,15 @@
 [gd_scene load_steps=19 format=3 uid="uid://bfqlx56dcx5fi"]
 
-[ext_resource type="PackedScene" uid="uid://1wtp181bse1x" path="res://tile_map.tscn" id="1_be4sr"]
+[ext_resource type="PackedScene" path="res://tile_map.tscn" id="1_be4sr"]
 [ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_nixpq"]
 [ext_resource type="PackedScene" uid="uid://bk610ucxrolmb" path="res://bulle.tscn" id="3_47giv"]
 [ext_resource type="PackedScene" uid="uid://cl4743t6yd5iy" path="res://big_bubble.tscn" id="4_3s706"]
-[ext_resource type="PackedScene" uid="uid://m4usun86d10o" path="res://game_camera.tscn" id="5_8r38h"]
-[ext_resource type="PackedScene" uid="uid://deakj10m201rt" path="res://void.tscn" id="7_87v1w"]
-[ext_resource type="PackedScene" uid="uid://hae4wg48twb6" path="res://platform-rl.tscn" id="9_0dvvr"]
-[ext_resource type="PackedScene" uid="uid://dfchue5acolig" path="res://spike.tscn" id="9_2h6fc"]
-[ext_resource type="PackedScene" uid="uid://db5ftcdrn4uci" path="res://platform-c.tscn" id="11_xwy7w"]
-[ext_resource type="PackedScene" uid="uid://b10fi7rapb318" path="res://platform-ud.tscn" id="12_lnoqy"]
+[ext_resource type="PackedScene" path="res://game_camera.tscn" id="5_8r38h"]
+[ext_resource type="PackedScene" path="res://void.tscn" id="7_87v1w"]
+[ext_resource type="PackedScene" path="res://platform-rl.tscn" id="9_0dvvr"]
+[ext_resource type="PackedScene" path="res://spike.tscn" id="9_2h6fc"]
+[ext_resource type="PackedScene" path="res://platform-c.tscn" id="11_xwy7w"]
+[ext_resource type="PackedScene" path="res://platform-ud.tscn" id="12_lnoqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwype"]
 size = Vector2(154.5, 12)

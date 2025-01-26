@@ -10,6 +10,8 @@ var impuls = Vector2(0,0)
 var areas = []
 var destroyIt = false
 var allowCollision = true
+var wiggling = 0.0
+var wiggling_acceleration = 0.0
 
 func Allow_collision(value: bool) -> void:
 	allowCollision = value
@@ -29,11 +31,15 @@ func _physics_process(delta: float) -> void:
 	if destroyIt:
 		queue_free()
 	
+#func _wiggling_process(delta: float) -> void:
+#	wiggling 
+	
 func selfDestroy() -> void:
 	destroyIt = true
 	
 func _impuls() -> void:
 	for area: Area2D in areas:
+		wiggling_acceleration += 1
 		impuls += (global_position - area.global_position) * IMPULS_POWER
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
