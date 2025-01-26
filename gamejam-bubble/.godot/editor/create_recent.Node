@@ -1,12 +1,10 @@
-<<<<<<< Updated upstream
-=======
-ParallaxBackground
+AnimatedSprite2D
 Sprite2D
+ColorRect
+ParallaxBackground
 ParallaxLayer
 Parallax2D
-AnimatedSprite2D
 TouchScreenButton
->>>>>>> Stashed changes
 Area2D
 CollisionShape2D
 Node2D
@@ -14,4 +12,3 @@ CharacterBody2D
 Timer
 Timer
 Camera2D
-Node
