@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ca3jx34iuc8hv"
+path="res://.godot/imported/PerituneMaterial_Quiet_Ocean.ogg-5d56a06cc6f975a8b9a5441b83b8553c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Art/UI and Sounds/PerituneMaterial_Quiet_Ocean.ogg"
+dest_files=["res://.godot/imported/PerituneMaterial_Quiet_Ocean.ogg-5d56a06cc6f975a8b9a5441b83b8553c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

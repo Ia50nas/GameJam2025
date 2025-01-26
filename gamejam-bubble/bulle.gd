@@ -103,6 +103,7 @@ func handle_movement(delta: float):
 	velocity.x = clamp(velocity.x, -maxHorizontalSpeed, maxHorizontalSpeed)
 	
 	if moveVector.y < 0 and (is_on_floor() or !$CoyoteTimer.is_stopped() or hasDoubeJump):
+		$Jump.play()
 		velocity.y = moveVector.y * jumpSpeed
 		if !is_on_floor() and $CoyoteTimer.is_stopped():
 			hasDoubeJump = false
@@ -127,9 +128,11 @@ func handle_movement(delta: float):
 
 func handle_dash_input():
 	if Input.is_action_just_pressed("Dash") and can_dash and not is_dashing:
+		$Dash.play
 		start_dash()
 
 func start_dash():
+	$Dash.play()
 	is_dashing = true
 	can_dash = false
 	dash_timer = dash_duration
@@ -180,6 +183,7 @@ func perform_homing_attack(delta):
 				if homing_target.is_in_group("smol"):
 					jumper=700
 				homing_target.get_parent().queue_free()
+				$Pop.play()
 				is_homing_active=false
 				homing_target=null
 				velocity.x=0
@@ -218,6 +222,7 @@ func _on_void_checker_area_entered(area: Area2D) -> void:
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	if area in get_tree().get_nodes_in_group('ouch'):
+		$Ouch.play()
 		health-=1
 		print("ouch")
 		if health<=0:
@@ -232,10 +237,12 @@ func _on_bubble_checker_area_entered(area: Area2D) -> void:
 		if area.is_in_group("smol"):
 				jumper=500
 		area.get_parent().queue_free()
+		$Pop.play()
 		velocity.x=0
 		velocity.y=-jumper
 
 func _grow_bubble(time) -> void:
+	$Bubble.play()
 	if current_bubble != null:
 		var newScale = Vector2(1,1) * (time + 1)
 		current_bubble.apply_scale(newScale / current_bubble.scale)
